@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+</head>
+<body>
+  <template id="temp"><div id="div1">我是template</div></template>
+  <div id="app">
+    <template id="first">
+      <div >我是vue-template <div >我是vue-template2</div></div>
+     
+      <!-- <strong style="color: red;">vue实例绑定的元素内部的template标签不支持v-show指令，即v-show="false"对template标签来说不起作用。但是此时的template标签支持v-if、v-else-if、v-else、v-for这些指令。</strong> -->
+    </template>
+    <p>区别template在vue与Html5</p>
+  </div>
+  <abc>我是自定义表现abc</abc>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript">
+    var temp= document.getElementById("temp");
+    console.log(temp.content);
+    console.log(temp.nodeName);
+    console.log(temp.innerHTML);
+    console.log(temp.content.getElementById("div1"));
+
+    var vm=new Vue({
+      el:"#app",
+      data:{
+        msg:'hellow',
+        flag:true
+      },
+      template:"#first"
+    })
+  </script>
+</body>
+
+</html>
