@@ -176,6 +176,20 @@ git log -n
 * **git remote -v**:可以查看这个远端仓库对应的地址
 * **git push origin master**:origin----->远端仓库名，master----->对应的分支
 
+### 多人协作解决冲突
+
+eg:如果合作伙伴修改了文件并提交了，同时你没有更新，直接修改了同一个文件，这时提交会报错。一下是解决冲突的方式：
+
+* **git fetch**：把远端的仓库拉取过来，但是并不合并；需要通过手动的方式进行合并
+  * git diff master origin/master
+    * origin master 是两件事，origin/master是一件事
+    * master是 一个本地分支
+    * origin/master是远程分支（它是名为“origin"的远程分支的本地副本，名为”master“
+* **git merge origin/master**:
+* **git pull**:直接拉取过来直接合并
+
+
+
 
 
 
