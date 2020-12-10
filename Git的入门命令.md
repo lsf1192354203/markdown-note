@@ -139,24 +139,43 @@ git log -n
 * **git commit**-------->由暂存区到-----版本区
 * **git commit -m "change file description"**
 * **git commit -a -m "file description"**---->简写方式，由工作区--------->版本库
-* **git log**打印修改的记录
+  * **git log**打印修改的记录,按回车键可以查看剩余的记录，退出按Q键
+
 ### 对比
+
 * **git diff**----->工作区与暂存区的差异
 * **git config --global core.quotepath false**---------->这样不会对0x80以上的字符进行quote,中文显示正常
 * **git diff --cached**:-------->对比的是暂存区与版本区的差异
 * **git diff HEAD**:-------->对比的是工作区与版本区的差异
+
 ### 撤销
+
 * **git reset HEAD git.js**:从暂存区恢复至工作区，清空暂存区
-* **git checkout git.js**:从版本区恢复至工作区。
+* **git checkout --git.js**:从版本区恢复至工作区。
   * git switch:用来切换分支
-  * git restore:用来还原工作区的文件，
-* **git commit --amend**:
+  * git restore filename:用来还原工作区的文件，
+* **git commit --amend**:已经提交后的发现有问题的文件，撤销之前的提交，git commit -m "change git .js"  --amend。
+
+### 删除
+
+* **git rm test.txt**:在工作区创建了一个test.txt文件，然后git add暂存区，之后在工作区删除test.txt,此时暂存区还有test.txt,这时候用**git rm test.txt**来删除暂存区文件
+* **git rm -f test.txt**:在工作区创建了一个test.txt文件，然后git add暂存区，之后删除暂存区test.txt,此时工作区test.txt也被删除了
+* **git rm --cached test.txt**:在工作区创建了一个test.txt文件，然后git add暂存区，之后删除暂存区test.txt,此时工作区test.txt仍存在
+
+### 恢复
+
+* **git checkout commit_id filename**:不小心误删了工作区的文件，可以通过此命令恢复，指定文件的还原
+* **git reset --hard commit_id **:恢复到之前的版本，这个还原操作是对版本的还原
+  * **git reset --hard HEAD^**:^代表往回往下走一步
+  * **git reset --hard HEAD~num**:num代表往回往下走num步
+
+* **git reflog**:再回到恢复之前
 
 
 
 
 
-  
+
 
 
 
