@@ -133,7 +133,7 @@ git log -n
     * ——git config  --global user.email------->查看邮箱
     * ——git config -list-------------------->>查看所有配置项
 * **git status**：查看当前仓库所在目录的文件状态
-* **git add demo.html**:[master  +2 ~0 -0 !]是工作区2个文件，修改0个，减少0个文件，绿色代表暂存区，红色代表工作区。-----------由工作区------>暂存区
+* **git add demo.html**:[master  +2 ~0 -0 !]是工作区2个文件，!是冲突，修改0个，减少0个文件，绿色代表暂存区，红色代表工作区。-----------由工作区------>暂存区
 * **git add .**将修改后的所有文件全部提交到暂存区
 * **git reset HEAD demo.html**撤回工作区-------暂存区的文件
 * **git commit**-------->由暂存区到-----版本区
@@ -202,8 +202,16 @@ eg:如何参与到没有权限的开源项目中：
 * **git checkout new1**:切换分支new1
 * **git checkout -b new2**:简写：创建new2分支并切换到new2分支
 * **git merge new1**:合并new1分支
+* **git checkout new2**:----->git commit -a -m-------->git checkout main
+* **git branch --merged**:查看的是main合并的分支
+* **git branch --no-merged**:查看的是main没有合并的分支
+* **git branch -d new1**:删除new1分支<font color=red>没有合并的分支是不允许删除的</font>
+* **git branch -D new2**:强制删除没有合并的分支
+* **git branch**:查看分支
 
+**<font color=red>解决有冲突的分支</font>**
 
+* 
 
 
 
