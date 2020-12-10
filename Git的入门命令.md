@@ -170,7 +170,11 @@ git log -n
   * **git reset --hard HEAD~num**:num代表往回往下走num步
 
 * **git reflog**:再回到恢复之前
+### 同步到远程仓库
 
+* **git remote**:查看远程仓库的名称,可以修改远程仓库名称**git remote add origin [远端仓库的真实地址]（https://github.com/lsf1192354203/markdown-note.git）**
+* **git remote -v**:可以查看这个远端仓库对应的地址
+* **git push origin master**:origin----->远端仓库名，master----->对应的分支
 
 
 
