@@ -141,6 +141,9 @@ git log -n
 * **git commit -a -m "file description"**---->简写方式，由工作区--------->版本库
 * **git log**打印修改的记录
 * **git diff**----->工作区与暂存区的差异
+* **git config --global core.quotepath false**---------->这样不会对0x80以上的字符进行quote,中文显示正常
+* **git diff --cached**:-------->对比的是暂存区与版本区的差异
+* **git diff HEAD**:-------->对比的是工作区与版本区的差异
 
 
 
