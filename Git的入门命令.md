@@ -209,11 +209,15 @@ eg:如何参与到没有权限的开源项目中：
 * **git branch -D new2**:强制删除没有合并的分支
 * **git branch**:查看分支
 
-**<font color=red>解决有冲突的分支</font>**
+**<font color=blue>github上的分支</font>**
 
-* 
+* git push
+* github上直接创建
 
+**<font color=blue>github上的标签</font>**
 
+* git tag
+* github上直接创建
 
 
 
