@@ -140,10 +140,17 @@ git log -n
 * **git commit -m "change file description"**
 * **git commit -a -m "file description"**---->简写方式，由工作区--------->版本库
 * **git log**打印修改的记录
+### 对比
 * **git diff**----->工作区与暂存区的差异
 * **git config --global core.quotepath false**---------->这样不会对0x80以上的字符进行quote,中文显示正常
 * **git diff --cached**:-------->对比的是暂存区与版本区的差异
 * **git diff HEAD**:-------->对比的是工作区与版本区的差异
+### 撤销
+* **git reset HEAD git.js**:从暂存区恢复至工作区，清空暂存区
+* **git checkout git.js**:从版本区恢复至工作区。
+  * git switch:用来切换分支
+  * git restore:用来还原工作区的文件，
+* **git commit --amend**:
 
 
 
