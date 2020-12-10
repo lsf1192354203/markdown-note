@@ -188,7 +188,20 @@ eg:如果合作伙伴修改了文件并提交了，同时你没有更新，直�
 * **git merge origin/master**:
 * **git pull**:直接拉取过来直接合并
 
+### 开源项目的协作
 
+eg:如何参与到没有权限的开源项目中：
+
+* fork：其实是开了一个新的分支，克隆了一个整体的版本放到当前用户名下
+* pull request
+
+### Git下的分支处理
+
+* **git branch**:查看当前分支
+* **git branch new1**:创建分支new1
+* **git checkout new1**:切换分支new1
+* **git checkout -b new2**:简写：创建new2分支并切换到new2分支
+* **git merge new1**:合并new1分支
 
 
 
