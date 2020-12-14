@@ -141,18 +141,20 @@ eg:如何参与到没有权限的开源项目中：
 * **git branch -d new1**:删除new1分支<font color=red>没有合并的分支是不允许删除的</font>
 * **git branch -D new2**:强制删除没有合并的分支
 * **git branch**:查看分支
+* **git branch -a**:查看所有分支。
 
 **<font color=blue>github上的分支</font>**
 
 * **git push**
 * github上直接创建
 
-**<font color=blue>github上的标签</font>**
+### Git 下的tag标签处理
 
-* **git tag**
-* github上直接创建
+* **git tag**:查看标签。
 
-
+* **git checkout tag_name**:(<font color=red>提示：git 处于一个detached HEAD状态。【detached 分离的】，因为tag相当于是一个快照，是不能更改它的代码的</font>)切换分支
+* 其实**tag**和**branch**是一样的操作
+* 
 
 
 
