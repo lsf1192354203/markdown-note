@@ -154,9 +154,20 @@ eg:如何参与到没有权限的开源项目中：
 
 * **git checkout tag_name**:(<font color=red>提示：git 处于一个detached HEAD状态。【detached 分离的】，因为tag相当于是一个快照，是不能更改它的代码的</font>)切换分支
 * 其实**tag**和**branch**是一样的操作
-* 
 
+### github设置ssh key
 
+* **ssh-keygen -t rsa -C "nideyouxiang@xxx.com" **
+* **cd ~/.ssh**
+* **cat id_rsa.pub** 在命令行打开这个文件，会直接输出密钥
+* 复制，打开github,点自己头像 >> settings >> SSH and GPG keys >>New SSH key 
+* titile 随便写。 key里  粘贴第六步的内容；完成。
+
+* **github设置ssh key 后push还要输入用户名和密码解决方案**
+  * **git remote remove origin**---------->删除本地指定的远程地址
+  * **git remote add origin  远程地址**---->添加远程地址
+  * **origin**由**HTTPS**的格式改为**SSH**格式：即：https://github.com/用户名/仓库名.git------------>git@github.com:用户名/仓库名.git
+  * 打开`config`文件可以看到`[remote "origin"]`的`url`为`ssh`格式
 
 
 
